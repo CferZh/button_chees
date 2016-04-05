@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">button chess</string>
+    <string name="action_settings">reset</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="s00">button chess</string>
+    <string name="go_button">GO!</string>
+    
+	<string name="s1">开始</string>
+	<string name="s2">PASS1</string>
+	<string name="s3">PASS2</string>
+	<string name="s4">PASS3</string>
+	<string name="s5">PASS4</string>
+	<string name="s6">PASS5</string>
+	<string name="s7">PASS6</string>
+	<string name="s8">PASS7</string>
+	<string name="s9">PASS8</string>
+	<string name="s10">PASS9</string>
+	<string name="s11">PASS10</string>
+	<string name="s12">PASS11</string>
+	<string name="s13">PASS12</string>
+	<string name="s14">PASS13</string>
+	<string name="s15">PASS14</string>
+	<string name="s16">PASS15</string>
+	<string name="s17">PASS16</string>
+	<string name="s18">PASS17</string>
+	<string name="s19">PASS18</string>
+	<string name="s20">PASS19</string>
+	<string name="s21">PASS20</string>
+	<string name="s22">PASS21</string>
+	<string name="s23">PASS22</string>
+	<string name="s24">PASS23</string>
+	<string name="s25">PASS24</string>
+	<string name="s26">PASS25</string>
+	<string name="s27">PASS26</string>
+	<string name="s28">PASS27</string>
+	<string name="s29">PASS28</string>
+	<string name="s30">PASS29</string>
+	<string name="s31">PASS30</string>
+	<string name="s32">PASS31</string>
+	<string name="s33">PASS32</string>
+	<string name="s34">PASS33</string>
+	<string name="s35">PASS34</string>
+	<string name="s36">PASS35</string>
+	<string name="s37">PASS36</string>
+	<string name="s38">PASS37</string>
+	<string name="s39">PASS38</string>
+	<string name="s40">结束啦！</string>
+	
+	
+	
+</resources>

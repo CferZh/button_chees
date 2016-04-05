@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name = "selected_color"> #333 </drawable>
+    <drawable name = "pressed_color"> #666 </drawable>
+    <drawable name = "normal_color"> #FFF </drawable>
+</resources>

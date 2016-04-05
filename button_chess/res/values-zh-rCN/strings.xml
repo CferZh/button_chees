@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">button_chess</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string name="s00">welcome to button_chess!</string>
+    
+    <string name="go_button">GO!</string>
+    <string name="s1">开始</string>
+	<string name="s2">PASS1</string>
+	<string name="s3">PASS2</string>
+	<string name="s4">PASS3</string>
+	<string name="s5">PASS4</string>
+	<string name="s6">PASS5</string>
+	<string name="s7">PASS6</string>
+	<string name="s8">PASS7</string>
+	<string name="s9">PASS8</string>
+	<string name="s10">PASS9</string>
+	<string name="s11">PASS10</string>
+	<string name="s12">PASS11</string>
+	<string name="s13">PASS12</string>
+	<string name="s14">PASS13</string>
+	<string name="s15">PASS14</string>
+	<string name="s16">PASS15</string>
+	<string name="s17">PASS16</string>
+	<string name="s18">PASS17</string>
+	<string name="s19">PASS18</string>
+	<string name="s20">PASS19</string>
+	<string name="s21">PASS20</string>
+	<string name="s22">PASS21</string>
+	<string name="s23">PASS22</string>
+	<string name="s24">PASS23</string>
+	<string name="s25">PASS24</string>
+	<string name="s26">PASS25</string>
+	<string name="s27">PASS26</string>
+	<string name="s28">PASS27</string>
+	<string name="s29">PASS28</string>
+	<string name="s30">PASS29</string>
+	<string name="s31">PASS30</string>
+	<string name="s32">PASS31</string>
+	<string name="s33">PASS32</string>
+	<string name="s34">PASS33</string>
+	<string name="s35">PASS34</string>
+	<string name="s36">PASS35</string>
+	<string name="s37">PASS36</string>
+	<string name="s38">PASS37</string>
+	<string name="s39">PASS38</string>
+	<string name="s40">结束啦！</string>
+
+	<string name="s1A"></string>
+	
+
+	<string name="s2A"></string>
+	
+
+	<string name="s3A"></string>
+	
+	
+	<string name="s41"></string>
+	<string name="s42"></string>
+	<string name="s43"></string>
+	<string name="s44"></string>
+	<string name="s45"></string>
+	<string name="s46"></string>
+	<string name="s47"></string>
+	<string name="s48"></string>
+	<string name="s49"></string>
+	<string name="s4A"></string>
+	
+	
+	<string name="s51"></string>
+	<string name="s52"></string>
+	<string name="s53"></string>
+	<string name="s54"></string>
+	<string name="s55"></string>
+	<string name="s56"></string>
+	<string name="s57"></string>
+	<string name="s58"></string>
+	<string name="s59"></string>
+	<string name="s5A"></string>
+
+	<string name="s61"></string>
+	<string name="s62"></string>
+	<string name="s63"></string>
+	<string name="s64"></string>
+	<string name="s65"></string>
+	<string name="s66"></string>
+	<string name="s67"></string>
+	<string name="s68"></string>
+	<string name="s69"></string>
+	<string name="s6A"></string>
+	
+	<string name="s71"></string>
+	<string name="s72"></string>
+	<string name="s73"></string>
+	<string name="s74"></string>
+	<string name="s75"></string>
+	<string name="s76"></string>
+	<string name="s77"></string>
+	<string name="s78"></string>
+	<string name="s79"></string>
+	<string name="s7A"></string>
+	
+	
+	
+</resources>
