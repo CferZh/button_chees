@@ -111,12 +111,16 @@ public class MainActivity extends Activity {
 		}
 	}
 
-    boolean isRunning = false;
 
 	class go_buttonlistener implements OnClickListener{
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
+            if(is_started) {
+                MyLog.i("isRunning please wait a moment!");
+                return ;
+            }
+
 //			if(!is_started){
 //				is_started=true;
 //				handler.post(handlerunable);
@@ -140,6 +144,7 @@ public class MainActivity extends Activity {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
+                    is_started = true;
                     /**
                      * 掷随机数
                      */
@@ -196,6 +201,8 @@ public class MainActivity extends Activity {
 //			String description=button_decription.get(now_pos);
 
                     System.out.println(description);
+
+                    is_started = false;
                 }
             }).start();
 
