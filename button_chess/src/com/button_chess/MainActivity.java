@@ -3,6 +3,7 @@ package com.button_chess;
 import java.util.HashMap;
 import java.util.Random;
 
+import com.MyLog;
 import com.button_chess.R;
 import com.button_util.button_util;
 import com.string_util.string_util;
@@ -109,6 +110,9 @@ public class MainActivity extends Activity {
 			
 		}
 	}
+
+    boolean isRunning = false;
+
 	class go_buttonlistener implements OnClickListener{
 		@Override
 		public void onClick(View v) {
@@ -121,57 +125,90 @@ public class MainActivity extends Activity {
 //				handler.removeCallbacks(handlerunable);
 //				is_started=false;
 //			}
+            if(MyLog.DEBUG) {
+                MyLog.i("Thread: " + Thread.currentThread().getName());
+            }
+
 			Button now_loc_button;
 			/**
 			 * 先还原上次格子的图片
 			 */
 			now_loc_button=map.get(now_pos);
 			now_loc_button.setBackgroundDrawable(resourse_map.get(now_pos));
-			/**
-			 * 掷随机数
-			 */
-			int randint=1+new Random().nextInt(6);
 
-			/**
-			 * v1.0  替换当前位置图片 √
-			 * v1.1 迭代替换路径图片  
-			 * v1.2 判断最终位置行为
-			 */
-			//移动棋子
-			for(int i=randint;i>0;i--){
-		//	now_pos=now_pos+randint;
-				now_loc_button=map.get(now_pos);
-				now_loc_button.setBackgroundDrawable(resourse_map.get(now_pos));
-				now_pos++;
-				if(now_pos>40){
-					now_pos=40;
-					break;
-				}
-				now_loc_button=map.get(now_pos);
-				now_loc_button.setBackgroundDrawable(chessman);
-				
-				//sleep then move again
-				try {
-					Thread.currentThread().sleep(1000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-			//判断行为 并 生成描述
-			String description="";
-			System.out.println(now_pos);
-			description = button_decription.get(now_pos);
+            //放到子线程里面，要不然会卡住
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    /**
+                     * 掷随机数
+                     */
+                    int randint=1+new Random().nextInt(6);
+
+                    /**
+                     * v1.0  替换当前位置图片 √
+                     * v1.1 迭代替换路径图片
+                     * v1.2 判断最终位置行为
+                     */
+                    //移动棋子
+                    for(int i=randint;i>0;i--){
+
+//                        handler.postDelayed(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                Button now_loc_button = map.get(now_pos);
+//                                now_loc_button.setBackgroundDrawable(resourse_map.get(now_pos));
+//
+//                            }
+//                        }, 200);
+                        //	now_pos=now_pos+randint;
+                        now_pos++;
+                        if(now_pos>40){
+                            now_pos=40;
+                            break;
+                        }
+                        //修改界面操作，使用handler放到主线程中进行修改
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                //把上一个复原
+                                Button last_loc_button = map.get(now_pos - 1);
+                                last_loc_button.setBackgroundDrawable(resourse_map.get(now_pos -1));
+
+                                Button now_loc_button = map.get(now_pos);
+                                now_loc_button.setBackgroundDrawable(chessman);
+
+                            }
+                        }, 200);
+
+                        //sleep then move again
+                        try {
+                            Thread.currentThread().sleep(1000);
+                        } catch (InterruptedException e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                    }
+
+                    String description="";
+                    System.out.println(now_pos);
+                    description = button_decription.get(now_pos);
 //			String description=button_decription.get(now_pos);
-			
-			System.out.println(description);
-			Toast.makeText(MainActivity.this, description,Toast.LENGTH_SHORT).show();
+
+                    System.out.println(description);
+                }
+            }).start();
+
+
+			//判断行为 并 生成描述
+
+//			Toast.makeText(MainActivity.this, description,Toast.LENGTH_SHORT).show();
 			
 //			now_loc.setBackground(background)
 			
 		}
 	}
-//	Handler handler=new Handler();
+	Handler handler=new Handler();
 //	Runnable handlerunable=new Runnable() {
 //		
 //		@Override
