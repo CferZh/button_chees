@@ -2,3 +2,9 @@
 
 /button_chess/bin
 /button_chess/gen
+/button_chess/local.properties
+/button_chess/build
+/button_chess/.classpath
+/button_chess/.gradle
+/button_chess/.idea
+/button_chess/*.iml
