@@ -32,8 +32,9 @@ public class button_util {
 	public static HashMap<Integer,Drawable> init_resourcemap(Resources r){
 		HashMap<Integer,Drawable> resourse_map=new HashMap<Integer, Drawable>();
 		/**
-		 * version 0 
-		 * to b continue: 按钮和图片的对应关系从配置文件中读取而不是一个一个改
+		 * version 0
+         * //使用todo标签提示效果更佳明显
+		 *  // TODO: 2016/4/6 按钮和图片的对应关系从配置文件中读取而不是一个一个改
 		 */
 		resourse_map.put(1, r.getDrawable(R.drawable.a));
 		resourse_map.put(2, r.getDrawable(R.drawable.b));

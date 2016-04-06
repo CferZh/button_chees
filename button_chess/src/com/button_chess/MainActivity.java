@@ -49,7 +49,8 @@ public class MainActivity extends Activity {
 		 * init location_map
 		 * map of the buttons to travel
 		 */
-		map=new HashMap<Integer, Button>();
+        //// TODO: 2016/4/6 把这么多button修改成使用canvas或者opengl进行图片绘制，这样就不用在地图文件中写了
+        map=new HashMap<Integer, Button>();
 		map.put(1, (Button)findViewById(R.id.mybutton71));
 		map.put(2, (Button)findViewById(R.id.mybutton72));
 		map.put(3, (Button)findViewById(R.id.mybutton73));
